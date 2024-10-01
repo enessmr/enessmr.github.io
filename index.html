@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connection Check</title>
-    <link rel="stylesheet" href="game.css>
 
     <!-- Google AdSense Auto Ads Code -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9083823868055674"
@@ -16,6 +15,12 @@
     
     <script>
       function loadGamePage() {
+        // Add game.css link dynamically when loading the page content
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'game.css';
+        document.head.appendChild(link);
+        
         document.body.innerHTML += `
           <div class="container">
               <div class="top-bar">
