@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    margin: 0; /* Reset default margin */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; /* Position relative for absolute children */
+}
+
+.top-bar {
+    background-color: #444;
+    padding: 10px;
+}
+
+.game-box {
+    margin: 20px 0; /* Margin for top and bottom */
+}
+
+.ad-section {
+    background-color: #333;
+    padding: 10px;
+    margin: 20px 0; /* Space above and below ad section */
+}
+
+.ad-placeholder {
+    background-color: #555; /* Background for the ad placeholder */
+    height: 100px; /* Fixed height for ad space */
+    border-radius: 5px; /* Rounded corners */
+    display: flex; /* Flexbox for centering content */
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-bar {
+    background-color: #444;
+    padding: 10px;
+    margin-top: 20px; /* Space above the bottom bar */
+}
+
+h1 {
+    color: #03e9f4;
+    margin: 0; /* Remove margin for consistent spacing */
+}
+
+a {
+    color: #03e9f4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+iframe {
+    border: none; /* Remove default iframe border */
+    border-radius: 10px; /* Rounded corners for iframe */
+}

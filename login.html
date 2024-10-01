@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Signup Page</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form id="signupForm" onsubmit="return handleSignup(event)">
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" required>
+            
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" required>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="signup.html">Login</a></p>
+    </div>
+
+    <script>
+        function handleSignup(event) {
+            event.preventDefault();
+            const username = document.getElementById("newUsername").value;
+            const password = document.getElementById("newPassword").value;
+
+            // Here you would usually send the new user data to the server
+            // For this example, let's just simulate success
+            alert("Signup successful! You can now log in.");
+            window.location.href = "login.html"; // Redirect to login page
+        }
+    </script>
+</body>
+</html>

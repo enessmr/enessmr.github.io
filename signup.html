@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form id="loginForm" onsubmit="return handleLogin(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            
+            <input type="checkbox" id="rememberMe">
+            <label for="rememberMe">Remember Me</label>
+            
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="login.html">Sign up</a></p>
+    </div>
+
+    <script>
+        // Auto-login check
+        window.onload = function() {
+            if (document.cookie.includes("loggedIn=true")) {
+                alert("You are already logged in!");
+                window.location.href = "welcome.html"; // Redirect to a welcome page
+            }
+        };
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const rememberMe = document.getElementById("rememberMe").checked;
+
+            // Here you would usually send the credentials to the server for verification
+            // For this example, let's just check if they match hardcoded values
+            if (username === "user" && password === "password") {
+                if (rememberMe) {
+                    document.cookie = "loggedIn=true; max-age=" + 60 * 60 * 24; // 1 day
+                }
+                alert("Login successful!");
+                window.location.href = "welcome.html"; // Redirect to a welcome page
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+    </script>
+</body>
+</html>
