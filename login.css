@@ -3,10 +3,12 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    font-size: 16px; /* Base font size */
 }
 
 .container {
-    width: 300px;
+    width: 90%; /* Use percentage for responsiveness */
+    max-width: 600px; /* Maximum width for larger screens */
     margin: 100px auto;
     padding: 20px;
     background-color: white;
@@ -16,6 +18,7 @@ body {
 
 h1 {
     text-align: center;
+    font-size: 2em; /* Responsive font size for h1 */
 }
 
 label {
@@ -30,6 +33,7 @@ input[type="password"] {
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 3px;
+    font-size: 1em; /* Responsive font size for inputs */
 }
 
 button {
@@ -40,6 +44,7 @@ button {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    font-size: 1em; /* Responsive font size for button */
 }
 
 button:hover {
@@ -48,4 +53,38 @@ button:hover {
 
 p {
     text-align: center;
+    font-size: 1em; /* Responsive font size for paragraph */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 50px auto; /* Reduce margin for mobile */
+        padding: 15px; /* Adjust padding for mobile */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Adjust font size for mobile */
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px; /* Increase padding for better touch targets */
+        font-size: 1em; /* Consistent font size */
+    }
+
+    button {
+        padding: 12px; /* Adjust button padding for mobile */
+        font-size: 1em; /* Consistent font size */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Further adjust font size for very small screens */
+    }
+
+    body {
+        font-size: 14px; /* Adjust base font size for smaller devices */
+    }
 }
